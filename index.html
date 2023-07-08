@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoMora</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex;justify-content: center; background-color: beige;">
+    <div class="main">
+        <h2 class="title">Photo Editor Tool</h2>
+        <hr>
+        <div class="content">
+            <div class="image" style="width: 100%; height: 300px; background-color: rgb(255, 255, 255);display: flex;justify-content: center;align-items: center;">
+                <img id="sourceImg" src="softsphereLogo.png" alt="select image" style="height: 300px; width: 300px; object-fit: contain;">
+            </div>
+            <br>
+            <div class="chooseImg">
+                <button class="chooseBtn" id="chooseImg">Choose Image</button>
+                <input type="file" id="inputImg" name="photo" accept="image/*" hidden>
+            </div>
+            <br>
+            <div class="utility disabled">
+                <div class="slider" style="border: 1px solid white; padding: 8px 5px;">
+                    <div class="sliderInfo" style="display: flex; justify-content: space-between;">
+                        <span id="filterName">Brightness</span>
+                        <span id="filterValue">100%</span>
+                    </div>
+                    <div class="sliderRange" style="padding-top: 5px;">
+                        <input type="range" name="sliderRange" id="sliderRange" max="200" style="width: 100%;">
+                    </div>
+                </div>
+                <br>
+                <div class="filter" style="border: 1px solid white; padding: 8px 5px;">
+                    <span class="filters">Filters</span>
+                    <div class="filterBtns" style="padding-top: 5px; display: flex;justify-content: center;">
+                        <button id="brightness" title="brightness" class="filterBtn active">Light</button>
+                        <button id="contrast" title="contrast" class="filterBtn">Contrast</button>
+                        <button id="hue" title="hue" class="filterBtn">Hue</button>
+                        <button id="blur" title="blur" class="filterBtn">Blur</button>
+                        <button id="opacity" title="opacity" class="filterBtn">Opacity</button>
+                    </div>
+                </div>
+                <br>
+                <div class="transform" style="border: 1px solid white; padding: 8px 5px;">
+                    <span class="transforms">Rotate & Flip</span>
+                    <div class="filterBtns" style="padding-top: 5px; display: flex;justify-content: center;">
+                        <button id="rotate-left" title="Rotate Left" class="filterBtnX">Left</button>
+                        <button id="rotate-right" title="Rotate Right" class="filterBtnX">Right</button>
+                        <button id="flip-x" title="Flip X-axis" class="filterBtnX">Horizontal</button>
+                        <button id="flip-y" title="Flip Y-axis" class="filterBtnX">Vertical</button>
+                    </div>
+                </div>
+                <br>
+                <div class="btn">
+                    <span class="filters">Rotate & Flip</span>
+                    <div class="btns" style="padding-top: 5px;">
+                        <button class="resBtn" id="reset" style="background-color: blue; color: white;">Reset Filter</button>
+                        <button class="resBtn" id="save" style="background-color: green; color: white;">Download Image</button>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script src="index.js"></script>
+</body>
+</html>

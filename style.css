@@ -1,0 +1,75 @@
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.active{
+    background-color: blue;
+    color: white;
+}
+
+.main{
+    background-color: rgb(117, 186, 255);
+    width: 25vw;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.main > h2 {
+    text-align: center;
+    padding: 0px;
+}
+
+.chooseBtn{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+}
+
+.filterBtn{
+    width: 19%!important;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    margin: 2px;
+}
+
+.filterBtnX{
+    width: 24.5%!important;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    margin: 2px;
+}
+
+.resBtn{
+    width: 120px!important;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+}
+
+@media (max-width:1000px) {
+    .main{
+        width: 60%;
+    }
+}
+
+@media (max-width:768px) {
+    .main{
+        width: 75%;
+    }
+}
+
+@media (max-width:512px) {
+    .main{
+        width: 100%;
+    }
+}
